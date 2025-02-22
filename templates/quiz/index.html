@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Quiz Platform</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style>
+    /* Page Background */
+    body {
+      background-color: #F8FAFF;
+      color: #333;
+      height: 100vh; /* Full viewport height */
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Centering Section */
+    section#section-jumbotron {
+      background-color: transparent;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    /* Jumbotron Text */
+    .jumbotron h1 {
+      font-weight: bold;
+      color: #1265A8;
+    }
+
+    .jumbotron p {
+      font-size: 1.3rem;
+      color: #555;
+    }
+
+    /* Sign-Up Button */
+    .btn-signup {
+      background-color: #F8FAFF !important;
+      color: #0E4D92 !important;
+      border: none;
+      font-size: 1.2rem;
+      padding: 12px 40px;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-signup:hover {
+      background-color: #F8FAFF;
+      color: #0E4D92;
+      transform: scale(1.05);
+    }
+
+    .btn-signup i {
+      margin-right: px; /* Space between icon and text */
+    }
+  </style>
+</head>
+
+<body>
+  {% include "quiz/navbar.html" %}
+  <br>
+
+  <!-- Centered Jumbotron Section (Plain Style) -->
+  <section id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+    <div class="container text-center">
+      <h1 class="display-4">Begin Your Quiz Journey</h1>
+      <p class="lead">Challenge yourself and enhance your expertise with interactive quizzes.</p>
+      <p class="lead">We offer a wide range of quizzes across multiple subjects.</p>
+      <p><strong>Join today and explore our quiz collection:</strong></p>
+
+      <br />
+      <a href="/student/studentsignup" class="btn btn-lg btn-signup">
+        <i class="fa fa-user-plus"></i> Sign Up Now
+      </a>
+
+    </div>
+  </section>
+
+  {% include "quiz/footer.html" %}
+</body>
+
+</html>
+
+
+
